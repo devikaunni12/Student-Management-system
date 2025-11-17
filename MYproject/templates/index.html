@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #d9a7c7, #fffcdc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="container">
+        <h1>🎓 Student Management System</h1>
+        <p>Manage your students efficiently with options to add, edit, view, and delete records.</p>
+        
+    <div id="content">
+        {% block content %}
+        
+        <div>
+            <a href="{% url 'student_form' %}" class="btn">➕ Add Student</a>
+            <a href="{% url 'view_students' %}" class="btn">📋 View Students</a>
+            <a href="{% url 'about' %}"class="btn">About</a>
+            
+        </div>
+
+
+        <div class="footer">
+            <p>Developed by Devika Unni 💻</p>
+        </div>
+        {% endblock %}
+    </div>
+    </div>
+</body>
+</html>

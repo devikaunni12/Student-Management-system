@@ -1,0 +1,9 @@
+- [x] Add new view function 'devika' in Myapp/views.py
+- [x] Add new URL pattern for 'devika/' in Myapp/urls.py
+- [x] Add link to 'devika' page in templates/index.html navigation
+- [x] Add example models demonstrating OneToOne, OneToMany, and ManyToMany relationships in Django to Myapp/models.py
+  - [x] Create Profile model with OneToOneField to Student
+  - [x] Create Department model and update Student.department to ForeignKey
+  - [x] Create Course model with ManyToManyField to Student
+  - [x] Run makemigrations and migrate
+  - [x] Optionally register new models in admin.py
