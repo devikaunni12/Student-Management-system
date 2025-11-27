@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+        .box {
+            background: white;
+            padding: 25px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        a.logout {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: crimson;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a.logout:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Welcome {{ request.session.username }} 🎉</h2>
+
+        <p>You are now logged in.</p>
+
+        <!-- Logout Button -->
+        <a href="{% url 'logout' %}" class="logout">Logout</a>
+    </div>
+
+</body>
+</html>
